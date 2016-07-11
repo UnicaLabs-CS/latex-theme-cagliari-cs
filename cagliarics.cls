@@ -53,6 +53,10 @@
 \newcommand{\candidate}[1]{\def\@candidate{#1}}
 \newcommand{\candidateNo}[1]{\def\@candidateNo{#1}}
 \newcommand{\academicYear}[1]{\def\@academicYear{#1}}
+
+% utilities
+\newcommand{\needcite}{\textsuperscript{\emph{citazione necessaria}}}
+
 % chapters
 \let\stdchapter\chapter
 \def\nostarchapter[#1]#2{\stdchapter[{#1}]{#2} \pagestyle{unica}}
