@@ -23,10 +23,8 @@
 \LoadClass[a4paper]{book}
 
 %% Additional packages
-\RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[pagestyles]{titlesec}
-\RequirePackage{multicol}
 \RequirePackage{fancyhdr}
 \RequirePackage{graphicx}
 \RequirePackage[a4paper,width=150mm,top=25mm,bottom=30mm,left=25mm,right=25mm]{geometry}
@@ -63,31 +61,28 @@
 \def\starchapter#1{\stdchapter*{{#1}} \pagestyle{plain}}
 \renewcommand*\chapter{\@ifstar{\starchapter}{\@dblarg\nostarchapter}}
 
-%% Class code
-\graphicspath{ {media/} }
-
+% cover page generation
 \newcommand{\frontPage}{
     \begin{titlepage}
         \begin{center}
             \vspace*{1cm}
             \includegraphics[width=3cm]{Logo_UNICA.png} \\[4ex]
-            \textsc{\LARGE \textbf{Università degli Studi di Cagliari}} \\[2ex]
-            \textsc{\large \textbf{Facoltà di Scienze}} \\[2ex]
+            \textsc{\LARGE \textbf{Universit\`a degli Studi di Cagliari}} \\[2ex]
+            \textsc{\large \textbf{Facolt\`a di Scienze}} \\[2ex]
             Corso di Laurea in Informatica
 
             \vfill
             {\LARGE \textbf{\@title}}
             \vfill
 
-    	    \begin{minipage}{.45\textwidth}
+    	    \begin{minipage}[t]{.49\textwidth}
                 \begin{flushleft}
                     \centering
-    		        \textbf{Docente di riferimento:} \\
-    		        Prof. \@supervisor \\
-                    ~
+                    \textbf{Docente di riferimento:} \\
+                    Prof. \@supervisor
                 \end{flushleft}
             \end{minipage}
-            \begin{minipage}{.45\textwidth}
+            \begin{minipage}[t]{.49\textwidth}
                 \begin{flushright}
                     \centering
                     \textbf{Candidato:} \\
